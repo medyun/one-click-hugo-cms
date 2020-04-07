@@ -1,5 +1,8 @@
 backend:
-  name: git-gateway
+  name: test-repo # git-gateway
+  repo: medyun/one-click-hugo-cms
+  branch: master
+  site_domain: location.hostname
 
 media_folder: "site/static/img" # Folder where user uploaded files should go
 public_folder: "img"
@@ -15,6 +18,22 @@ collections: # A list of collections the CMS should be able to edit
       - {label: "Intro Blurb", name: "description", widget: "text"}
       - {label: "Image", name: "image", widget: "image", required: false}
       - {label: "Body", name: "body", widget: "markdown"}
+  - name: "urunler"
+    label: "Ürünler"
+    folder: "site/content/products"
+    create: true
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Intro Blurb", name: "description", widget: "text"}
+      - {label: "Image", name: "image", widget: "image", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
+  - name: "hizmetlerimiz"
+    label: "Hizmetlerimiz"
+    folder: "site/content/hizmetlerimiz/aaa"
+    create: true
+    fields:
+          - {label: Title, name: title, widget: string}
   - name: "pages"
     label: "Pages"
     files:
